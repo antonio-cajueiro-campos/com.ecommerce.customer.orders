@@ -1,21 +1,33 @@
 # E-commerce Order Processing System
 
-Este repositório contém um sistema de processamento de pedidos para um e-commerce, utilizando Kafka, Spring Boot e um banco de dados não-relacional.
+Sistema de processamento de pedidos para a empresa "Ecommerce".
+Projeto criado utilizando a arquitetura hexagonal em conjunto com os conceitos DDD, SOLID e DRY
 
-## Tecnologias Utilizadas
+## Definições
+* **WebApi:** Contém as entradas da aplicação, Controllers e configurações de ambiente.
+* **Application:** Contém os fluxos de caso de uso da aplicação.
+* **Domain:** Contém as regras de negócio do projeto.
+* **CrossCutting:** Contém as regras compartilhadas e códigos útils para as camadas.
+* **Infrastructure:** Contém os códigos de banco de dados e de infraestrutura do projeto.
+* **UnitTests:** Contém os testes unitários do projeto.
+* **IntegrationTests:** Contém os testes de integração do projeto.
 
-- **Spring Boot**: Framework usado para o desenvolvimento da aplicação Java.
-- **Kafka**: Sistema de mensagens para processamento de eventos em tempo real.
-- **MongoDB**: Banco de dados não-relacional para armazenar os dados dos pedidos.
+<p align="center">
+    <img src="https://github.com/antonio-cajueiro-campos/com.ecommerce.customer.orders/blob/main/doc/hexagon-archtecture.drawio.png?raw=true" alt="Project Architecture">
+</p>
+
+## Tecnologias Empregadas
+* **Linguagem:** Java 21.
+* **Conteinerização:** Docker.
+* **Framework:** SpringBoot 3.3.4 | Framework usado para o desenvolvimento da aplicação Java.
+* **Database:** MongoDB | Banco de dados não-relacional para armazenar os dados dos pedidos.
+* **Mensageria:** Kafka | Sistema de mensageria para processamento de eventos em tempo real.
 
 ## Como Rodar o Sistema Localmente
 
 ### Pré-requisitos
 
-- Java 21 ou superior
-- Maven
-- MongoDB
-- Kafka
+- Ter o Docker instalado na máquina
 
 ### Passo a Passo
 
@@ -24,6 +36,10 @@ Este repositório contém um sistema de processamento de pedidos para um e-comme
    ```bash
    git clone https://github.com/seu-usuario/repo.git
    cd repo
+   ```
+
+2. **Inicie o docker compose para subir os containers:**
+   ```bash
    docker-compose up -d
    ```
 
