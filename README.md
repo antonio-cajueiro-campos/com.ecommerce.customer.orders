@@ -4,16 +4,15 @@ Este repositório contém um sistema de processamento de pedidos para um e-comme
 
 ## Tecnologias Utilizadas
 
-- **Spring Boot**: Framework para desenvolvimento de aplicações Java.
+- **Spring Boot**: Framework usado para o desenvolvimento da aplicação Java.
 - **Kafka**: Sistema de mensagens para processamento de eventos em tempo real.
 - **MongoDB**: Banco de dados não-relacional para armazenar os dados dos pedidos.
-- **ModelMapper**: Biblioteca para mapeamento de objetos.
 
 ## Como Rodar o Sistema Localmente
 
 ### Pré-requisitos
 
-- Java 11 ou superior
+- Java 21 ou superior
 - Maven
 - MongoDB
 - Kafka
