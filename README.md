@@ -13,7 +13,7 @@ Projeto criado utilizando a arquitetura hexagonal em conjunto com os conceitos D
 * **IntegrationTests:** Contém os testes de integração do projeto.
 
 <p align="center">
-    <img src="https://github.com/antonio-cajueiro-campos/com.ecommerce.customer.orders/blob/main/doc/hexagon-archtecture.drawio.png?raw=true" alt="Project Architecture">
+    <img src="https://github.com/antonio-cajueiro-campos/com.ecommerce.customer.orders/blob/main/docs/hexagon-archtecture.drawio.png?raw=true" alt="Project Architecture">
 </p>
 
 ## Tecnologias Empregadas
