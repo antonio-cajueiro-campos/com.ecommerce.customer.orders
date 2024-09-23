@@ -72,3 +72,4 @@ Para manter a consistência dos dado em uma arquitetura de evento utilizei **Pra
 - Ordem de Processamento dos Eventos: Particionamento de eventos
 - Duplicidade de Eventos: Sistema de validação de Idempotência
 - Erros por inconsistências temporárias: Dead letter queues (DLQs)
+- Tolerância a Falhas e Disponibilidade: Circuit breakers
