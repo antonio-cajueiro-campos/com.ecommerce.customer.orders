@@ -40,14 +40,14 @@ Projeto criado utilizando a arquitetura hexagonal em conjunto com os conceitos D
    docker-compose up -d
    ```
    
-3. **Observabilidade:**
-### Caso queira ter métricas de consumo, produção erros e alarmistica, o projeto inclue o pacote já configura do Prometheus e Grafana para montar dashboards
+### Observabilidade
+Caso queira ter métricas de consumo, produção erros e alarmistica, o projeto inclue o pacote já configura do Prometheus e Grafana para montar dashboards
 - URL Prometheus: [http://localhost:9090/](http://localhost:9090/)
 - URL Grafana: [http://localhost:3000/](http://localhost:3000/)
 **Usuário:** admin
 **Senha:** admin
 
-### O Projeto também conta com KafDrop para analise de tópicos kafka
+O Projeto também conta com KafDrop para analise de tópicos kafka
 - URL KafDrop: [http://localhost:19000/](http://localhost:19000/)
 
 
