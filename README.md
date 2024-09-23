@@ -51,15 +51,15 @@ O Projeto também conta com KafDrop para analise de tópicos kafka
 - URL KafDrop: [http://localhost:19000/](http://localhost:19000/)
 
 
-# Decisões Técnicas
-## Escolha do Banco de Dados Não-Relacional
+## Decisões Técnicas
+### Escolha do Banco de Dados Não-Relacional
 Optei pelo uso do MongoDB por várias razões:
 
 - Flexibilidade de Dados: A modelagem dos dados no MongoDB permite armazenar informações de forma não rígida, ideal para aplicações onde a estrutura dos dados pode evoluir ao longo do tempo.
 - Escalabilidade: O MongoDB oferece suporte a uma fácil escalabilidade horizontal, o que é benéfico para um sistema que pode crescer em volume de dados e tráfego.
 - Desempenho: Para operações de leitura e gravação intensivas, o MongoDB demonstrou desempenho superior em comparação com bancos de dados relacionais tradicionais.
 
-## Modelagem dos Dados
+### Modelagem dos Dados
 A modelagem dos dados foi feita levando em consideração:
 
 - Estruturas de Dados Simples: Cada pedido é armazenado como um documento, o que simplifica a leitura e a manipulação dos dados.
