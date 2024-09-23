@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "38cc26c7-1b94-476e-9543-29b70e2f8d1f",
+		"name": "Customer Orders API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33379013"
+	},
+	"item": [
+		{
+			"name": "Create Purchase Order Event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orders\": [\r\n        {\r\n            \"orderId\": \"{{$guid}}\",\r\n            \"customerId\": \"{{$guid}}\",\r\n            \"amount\": 100.00,\r\n            \"status\": \"PAID\",\r\n            \"date\": \"2024-09-22T00:00:00\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7661/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7661",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Emit Mass Purchase Order Events",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orders\": [\r\n        {\r\n            \"orderId\": \"{{$guid}}\",\r\n            \"customerId\": \"{{$guid}}\",\r\n            \"amount\": -100.00,\r\n            \"status\": \"PAID\",\r\n            \"date\": \"2024-09-22T00:00:00\"\r\n        },\r\n        {\r\n            \"orderId\": \"{{$guid}}\",\r\n            \"customerId\": \"{{$guid}}\",\r\n            \"amount\": -100.00,\r\n            \"status\": \"PAID\",\r\n            \"date\": \"2024-09-22T00:00:00\"\r\n        },\r\n        {\r\n            \"orderId\": \"{{$guid}}\",\r\n            \"customerId\": \"{{$guid}}\",\r\n            \"amount\": -100.00,\r\n            \"status\": \"PAID\",\r\n            \"date\": \"2024-09-22T00:00:00\"\r\n        },\r\n        {\r\n            \"orderId\": \"{{$guid}}\",\r\n            \"customerId\": \"{{$guid}}\",\r\n            \"amount\": -100.00,\r\n            \"status\": \"PAID\",\r\n            \"date\": \"2024-09-22T00:00:00\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7661/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7661",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pruchase Order Event",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7661/api/v1/orders/00000000-0000-0000-0000-000000000002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7661",
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"00000000-0000-0000-0000-000000000002"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
