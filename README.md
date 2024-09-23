@@ -23,21 +23,32 @@ Projeto criado utilizando a arquitetura hexagonal em conjunto com os conceitos D
 
 ### Pré-requisitos
 
-- Ter o Docker instalado na máquina
+- Docker instalado na máquina
+- Postman para realizar requisições
 
 ### Passo a Passo
 
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/seu-usuario/repo.git
-   cd repo
+   git clone https://github.com/antonio-cajueiro-campos/com.ecommerce.customer.orders.git
+   cd com.ecommerce.customer.orders
    ```
 
 2. **Inicie o docker compose para subir os containers:**
    ```bash
    docker-compose up -d
    ```
+   
+3. **Observabilidade:**
+###Caso queira ter métricas de consumo, produção erros e alarmistica, o projeto inclue o pacote já configura do Prometheus e Grafana para montar dashboards
+- URL Prometheus: [http://localhost:9090/](http://localhost:9090/)
+- URL Grafana: [http://localhost:3000/](http://localhost:3000/)
+**Usuário:** admin
+**Senha:** admin
+
+###O Projeto também conta com KafDrop para analise de tópicos kafka
+- URL KafDrop: [http://localhost:19000/](http://localhost:19000/)
 
 
 # Decisões Técnicas
