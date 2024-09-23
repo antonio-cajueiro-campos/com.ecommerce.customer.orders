@@ -77,3 +77,6 @@ Para manter a consistência dos dado em uma arquitetura de evento utilizei **Pra
 - Duplicidade de Eventos: Sistema de validação de Idempotência
 - Erros por inconsistências temporárias: Dead letter queues (DLQs)
 - Tolerância a Falhas e Disponibilidade: Circuit breakers
+
+### Referências
+- Consistência MongoDB: [https://www.mongodb.com/pt-br/docs/manual/core/read-isolation-consistency-recency/](https://www.mongodb.com/pt-br/docs/manual/core/read-isolation-consistency-recency/)
