@@ -57,7 +57,7 @@ Optei pelo uso do MongoDB por várias razões:
 
 - Flexibilidade de Dados: A modelagem dos dados no MongoDB permite armazenar informações de forma não rígida, ideal para aplicações onde a estrutura dos dados pode evoluir ao longo do tempo.
 - Escalabilidade: O MongoDB oferece suporte a uma fácil escalabilidade horizontal, o que é benéfico para um sistema que pode crescer em volume de dados e tráfego.
-- Desempenho: Para operações de leitura e gravação intensivas, o MongoDB demonstrou desempenho superior em comparação com bancos de dados relacionais tradicionais.
+- Desempenho: Para operações de leitura e gravação intensivas, o MongoDB tem desempenho superior em comparação com bancos de dados relacionais tradicionais.
 
 ### Modelagem dos Dados
 A modelagem dos dados foi feita levando em consideração:
