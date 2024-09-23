@@ -1,0 +1,41 @@
+server:
+  port: 7662
+
+spring:
+  application:
+    name: 'customer.orders.consumer'
+  kafka:
+    bootstrap-servers: 'kafka:9092'
+  data:
+    mongodb:
+      uri: 'mongodb://root:bdcd0225b7b045e8a94b1497ed686820@mongo:27017/orders?authSource=admin'
+
+resilience4j.circuitbreaker:
+  instances:
+    mongoDBOrderRepository:
+      minimumNumberOfCalls: 5
+      slidingWindowSize: 5
+      failureRateThreshold: 50
+      waitDurationInOpenState: 10000
+      permittedNumberOfCallsInHalfOpenState: 3
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'metrics,prometheus'
+  endpoint:
+    prometheus:
+      enabled: true
+    metrics:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+logging:
+  structured:
+    format:
+      console: 'ecs'
