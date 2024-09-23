@@ -41,7 +41,7 @@ Projeto criado utilizando a arquitetura hexagonal em conjunto com os conceitos D
    ```
    
 ## Observabilidade
-1. Caso queira ter métricas de consumo, produção erros e alarmistica, o projeto inclue o pacote já configura do Prometheus e Grafana para montar dashboards
+1. Caso queira ter métricas de consumo, produção, logs de erros e alarmistica, o projeto inclui o pacote já configurado **Prometheus** para expor metricas e **Grafana** para facilitar na visualização e criação de dashboards
 - URL Prometheus: [http://localhost:9090/](http://localhost:9090/)
 - URL Grafana: [http://localhost:3000/](http://localhost:3000/)
 - **Usuário:** admin
