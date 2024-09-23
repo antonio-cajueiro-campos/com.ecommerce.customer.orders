@@ -55,10 +55,10 @@ Projeto criado utilizando a arquitetura hexagonal em conjunto com os conceitos D
 ### Escolha do Banco de Dados Não-Relacional
 Optei pelo uso do MongoDB por várias razões:
 
+- Fortemente Consistente: Com as configurações de ReadConcern e WriteConcern como Majority, você consegue alcançar uma escrita e leitura fortemente consistente pois o mongo fará a verificação na maioria dos nós.
 - Flexibilidade de Dados: A modelagem dos dados no MongoDB permite armazenar informações de forma não rígida, ideal para aplicações onde a estrutura dos dados pode evoluir ao longo do tempo.
 - Escalabilidade: O MongoDB oferece suporte a uma fácil escalabilidade horizontal, o que é benéfico para um sistema que pode crescer em volume de dados e tráfego.
 - Desempenho: Para operações de leitura e gravação intensivas, o MongoDB tem desempenho superior em comparação com bancos de dados relacionais tradicionais.
-- Fortemente Consistente: Com as configurações de ReadConcern e WriteConcern como Majority, você consegue alcançar uma escrita e leitura fortemente consistente pois o mongo fará a verificação na maioria dos nós.
 
 ### Modelagem dos Dados
 A modelagem dos dados foi feita levando em consideração:
