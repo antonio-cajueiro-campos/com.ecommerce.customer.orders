@@ -39,6 +39,9 @@ Projeto criado utilizando a arquitetura hexagonal em conjunto com os conceitos D
    ```bash
    docker-compose up -d
    ```
+
+2. **Importe a Collection Postman:**
+   Acesse docs/ e localize 'Customer Orders API.postman_collection.json'
    
 ## Observabilidade
 1. Caso queira ter métricas de consumo, produção, logs de erros e alarmistica, o projeto inclui o pacote já configurado **Prometheus** para expor metricas e **Grafana** para facilitar na visualização e criação de dashboards
