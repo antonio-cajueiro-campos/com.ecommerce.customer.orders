@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 
+import java.util.UUID;
 import java.util.function.BiConsumer;
 
 public abstract class ProducerBase<T> {
@@ -17,10 +18,10 @@ public abstract class ProducerBase<T> {
         this.metricsService = metricsService;
     }
 
-    protected void send(T data, String topic) {
+    protected void send(T data, String key, String topic) {
         try {
             metricsService.addSentEvents();
-            kafkaTemplate.send(topic, data).whenComplete(sentMessage(topic));
+            kafkaTemplate.send(topic, key, data).whenComplete(sentMessage(topic));
         } catch (Exception ex) {
             logger.error("An unexpected error occurred: {}", ex.getMessage(), ex);
         }

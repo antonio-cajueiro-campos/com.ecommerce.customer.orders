@@ -17,6 +17,6 @@ public class KafkaOrderPurchaseProducer extends ProducerBase<OrderMessage> imple
     }
 
     public void produce(ArrayList<OrderMessage> messages, String topic) {
-        messages.forEach(message -> send(message, topic));
+        messages.forEach(message -> send(message, message.getData().getOrderId().toString(), topic));
     }
 }
