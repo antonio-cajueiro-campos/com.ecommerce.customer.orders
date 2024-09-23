@@ -39,6 +39,9 @@ Projeto criado utilizando a arquitetura hexagonal em conjunto com os conceitos D
    ```bash
    docker-compose up -d
    ```
+
+2. **Importe a Collection Postman:**
+   Acesse docs/ e localize 'Customer Orders API.postman_collection.json'
    
 ## Observabilidade
 1. Caso queira ter métricas de consumo, produção, logs de erros e alarmistica, o projeto inclui o pacote já configurado **Prometheus** para expor metricas e **Grafana** para facilitar na visualização e criação de dashboards
@@ -55,6 +58,7 @@ Projeto criado utilizando a arquitetura hexagonal em conjunto com os conceitos D
 ### Escolha do Banco de Dados Não-Relacional
 Optei pelo uso do MongoDB por várias razões:
 
+- Fortemente Consistente: Com as configurações de ReadConcern e WriteConcern como Majority, você consegue alcançar uma escrita e leitura fortemente consistente pois o mongo fará a verificação na maioria dos nós.
 - Flexibilidade de Dados: A modelagem dos dados no MongoDB permite armazenar informações de forma não rígida, ideal para aplicações onde a estrutura dos dados pode evoluir ao longo do tempo.
 - Escalabilidade: O MongoDB oferece suporte a uma fácil escalabilidade horizontal, o que é benéfico para um sistema que pode crescer em volume de dados e tráfego.
 - Desempenho: Para operações de leitura e gravação intensivas, o MongoDB tem desempenho superior em comparação com bancos de dados relacionais tradicionais.
