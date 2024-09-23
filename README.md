@@ -4,13 +4,9 @@ Sistema de processamento de pedidos para a empresa "Ecommerce".
 Projeto criado utilizando a arquitetura hexagonal em conjunto com os conceitos DDD, SOLID e DRY
 
 ## Definições
-* **WebApi:** Contém as entradas da aplicação, Controllers e configurações de ambiente.
 * **Application:** Contém os fluxos de caso de uso da aplicação.
 * **Domain:** Contém as regras de negócio do projeto.
-* **CrossCutting:** Contém as regras compartilhadas e códigos útils para as camadas.
-* **Infrastructure:** Contém os códigos de banco de dados e de infraestrutura do projeto.
-* **UnitTests:** Contém os testes unitários do projeto.
-* **IntegrationTests:** Contém os testes de integração do projeto.
+* **Adapters:** Contém os adaptadores externos da aplicação, como Web, Kafka, Repositories entre outros.
 
 <p align="center">
     <img src="https://github.com/antonio-cajueiro-campos/com.ecommerce.customer.orders/blob/main/docs/hexagon-archtecture.drawio.png?raw=true" alt="Project Architecture">
