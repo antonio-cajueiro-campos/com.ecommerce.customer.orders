@@ -65,3 +65,10 @@ A modelagem dos dados foi feita levando em consideração:
 - Estruturas de Dados Simples: Cada pedido é armazenado como um documento, o que simplifica a leitura e a manipulação dos dados.
 - Relações e Indexação: Utilizamos referências entre entidades onde necessário, garantindo um acesso rápido e eficiente às informações relacionadas.
 - Simplicidade de Consulta: A estrutura dos documentos facilita consultas complexas e análises em tempo real, aproveitando a flexibilidade do MongoDB.
+
+### Consistência de Dados
+Para manter a consistência dos dado em uma arquitetura de evento utilizei **Praticas de Compensação**:
+
+- Ordem de Processamento dos Eventos: Particionamento de eventos
+- Duplicidade de Eventos: Sistema de validação de Idempotência
+- Erros por inconsistências temporárias: Dead letter queues (DLQs)
